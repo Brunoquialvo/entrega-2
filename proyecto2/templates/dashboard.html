@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block contenido %}
+<h3>Bienvenido, {{ usuario.nombre }} {{ usuario.apellido }}</h3>
+<p class="text-muted">Panel principal del sistema de gestión de usuarios.</p>
+
+<div class="mt-4">
+    <a href="{{ url_for('lista_usuarios') }}" class="btn btn-primary me-2">Ver Usuarios</a>
+    <a href="{{ url_for('nuevo_usuario') }}" class="btn btn-success me-2">Nuevo Usuario</a>
+    <a href="{{ url_for('actividad') }}" class="btn btn-secondary">Ver Actividad</a>
+</div>
+{% endblock %}
